@@ -1,0 +1,16 @@
+.login-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form-wrapper {
+  color: white;
+}
+.login-form-wrapper h2 {
+  margin-bottom: 50px;
+}
+/* .login-form-container {
+  border: 1px solid red;
+  width: 500px;
+} */
