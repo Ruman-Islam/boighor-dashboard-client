@@ -12,10 +12,12 @@ const Dashboard = () => {
     const [isExists, setIsExists] = useState(true);
     const [user, ,] = useAuthState(auth);
 
+
     useEffect(() => {
         (async () => {
             try {
                 const { data: { result } } = await fetcher.get(`admin/is-exists?email=${user?.email}`)
+                // console.log(result);
                 setIsExists(result)
             } catch (error) {
                 setIsExists(false);

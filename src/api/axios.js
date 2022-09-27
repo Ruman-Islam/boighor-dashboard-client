@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseURL = 'https://boighor-dashboard-server-59r5.vercel.app/'
+const baseURL = 'https://boighor-dashboard-server-59r5.vercel.app/api/v1/'
 
 const fetcher = axios.create({
     baseURL,

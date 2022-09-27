@@ -8,7 +8,6 @@ import {
     faUserPlus,
     faIndustry,
     faUserTag,
-    faCartPlus,
     faFlag,
     faPrint
 } from '@fortawesome/free-solid-svg-icons';

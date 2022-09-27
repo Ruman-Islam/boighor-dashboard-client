@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 const PrivateRoute = () => {
     const location = useLocation();
     const [user, isLoading,] = useAuthState(auth)
+    // console.log(user)
 
     if (isLoading) {
         return <h1 className='text-center'>Loading...</h1>
