@@ -20,9 +20,9 @@ const Login = () => {
     return (
         <div className='login-main bg-dark'>
             <div className='login-form-wrapper w-25'>
-                <h2>বইঘরে স্বাগতম </h2>
+                <h2 className='text-center'>বইঘর ইনভেনটরিতে স্বাগতম </h2>
                 <div className='w-100'>
-                    <button onClick={() => signInWithGoogle()}>Login</button>
+                    <button className='btn btn-success w-100' onClick={() => signInWithGoogle()}>Login</button>
                 </div>
             </div>
         </div>

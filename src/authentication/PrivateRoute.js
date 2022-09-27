@@ -1,6 +1,7 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../firebase/firebaseConfig';
+import Swal from 'sweetalert2';
 
 const PrivateRoute = () => {
     const location = useLocation();
@@ -11,6 +12,7 @@ const PrivateRoute = () => {
     }
 
     if (!user) {
+        Swal.fire("User not found. Please contact with your provider")
         return <Navigate to='/login' state={{ from: location }} replace />
     } else {
         return <Outlet />;

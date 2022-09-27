@@ -76,7 +76,7 @@ const AddProduct = () => {
                                 })}
                                 type="text"
                                 className="form-control" />
-                            {errors.title && errors.title?.message}
+                            <p className="text-danger" >{errors.title && errors.title?.message}</p>
                         </div>
 
                         <div className="mb-3 col-md-6">
@@ -90,7 +90,7 @@ const AddProduct = () => {
                                 })}
                                 type="text"
                                 className="form-control" />
-                            {errors.author && errors.author?.message}
+                            <p className="text-danger" >  {errors.author && errors.author?.message}</p>
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@ const AddProduct = () => {
                                 })}
                                 type="text"
                                 className="form-control" />
-                            {errors.publisher && errors.publisher?.message}
+                            <p className="text-danger" >{errors.publisher && errors.publisher?.message}</p>
                         </div>
 
                         <div className="mb-3 col-md-6">
@@ -120,7 +120,7 @@ const AddProduct = () => {
                                 })}
                                 type="text"
                                 className="form-control" />
-                            {errors.category && errors.category?.message}
+                            <p className="text-danger" > {errors.category && errors.category?.message}</p>
                         </div>
                     </div>
 
@@ -136,7 +136,7 @@ const AddProduct = () => {
                                 })}
                                 type="text"
                                 className="form-control" />
-                            {errors.country && errors.country?.message}
+                            <p className="text-danger" >  {errors.country && errors.country?.message}</p>
                         </div>
 
                         <div className="mb-3 col-md-6">
@@ -150,7 +150,7 @@ const AddProduct = () => {
                                 })}
                                 type="text"
                                 className="form-control" />
-                            {errors.language && errors.language?.message}
+                            <p className="text-danger" >  {errors.language && errors.language?.message}</p>
                         </div>
                     </div>
 
@@ -166,7 +166,7 @@ const AddProduct = () => {
                                 })}
                                 type="text"
                                 className="form-control" />
-                            {errors.edition && errors.edition?.message}
+                            <p className="text-danger" >    {errors.edition && errors.edition?.message}</p>
                         </div>
 
                         <div className="mb-3 col-md-6">
@@ -180,7 +180,7 @@ const AddProduct = () => {
                                 })}
                                 type="text"
                                 className="form-control" />
-                            {errors.copy_version && errors.copy_version?.message}
+                            <p className="text-danger" >  {errors.copy_version && errors.copy_version?.message}</p>
                         </div>
                     </div>
 
@@ -196,7 +196,7 @@ const AddProduct = () => {
                                 })}
                                 type="number"
                                 className="form-control" />
-                            {errors.isbn && errors.isbn?.message}
+                            <p className="text-danger" >  {errors.isbn && errors.isbn?.message}</p>
                         </div>
 
                         <div className="mb-3 col-md-6">
@@ -210,7 +210,7 @@ const AddProduct = () => {
                                 })}
                                 type="number"
                                 className="form-control" />
-                            {errors.sell_price && errors.sell_price?.message}
+                            <p className="text-danger" >{errors.sell_price && errors.sell_price?.message}</p>
                         </div>
                     </div>
 
@@ -226,7 +226,7 @@ const AddProduct = () => {
                                 })}
                                 type="number"
                                 className="form-control" />
-                            {errors.quantity && errors.quantity?.message}
+                            <p className="text-danger" > {errors.quantity && errors.quantity?.message}</p>
                         </div>
 
                         <div className="mb-3 col-md-6">
@@ -240,7 +240,7 @@ const AddProduct = () => {
                                 })}
                                 type="number"
                                 className="form-control" />
-                            {errors.page_length && errors.page_length?.message}
+                            <p className="text-danger" >{errors.page_length && errors.page_length?.message}</p>
                         </div>
                     </div>
 
@@ -257,7 +257,7 @@ const AddProduct = () => {
                             rows="3"
                         >
                         </textarea>
-                        {errors.summary && errors.summary?.message}
+                        <p className="text-danger" >    {errors.summary && errors.summary?.message}</p>
                     </div>
 
                     <div className='row'>

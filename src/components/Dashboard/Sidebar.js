@@ -6,6 +6,11 @@ import {
     faThLarge,
     faShoppingBasket,
     faUserPlus,
+    faIndustry,
+    faUserTag,
+    faCartPlus,
+    faFlag,
+    faPrint
 } from '@fortawesome/free-solid-svg-icons';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase/firebaseConfig';
@@ -40,45 +45,33 @@ const Sidebar = () => {
                     </Link>
                     <Link className="sidebarLink" to='all-product'>
                         <span>
-                            <FontAwesomeIcon icon={faPlus} />
+                            <FontAwesomeIcon icon={faPrint} />
                         </span>
                         Products
                     </Link>
-                    <Link className="sidebarLink" to='all-product'>
+                    <Link className="sidebarLink" to='admin-list'>
                         <span>
                             <FontAwesomeIcon icon={faUserPlus} />
                         </span>
                         Admins
                     </Link>
-                    <Link className="sidebarLink" to='/'>
+                    <Link className="sidebarLink" to='vendor-list'>
                         <span>
-                            <FontAwesomeIcon icon={faThLarge} />
+                            <FontAwesomeIcon icon={faIndustry} />
                         </span>
                         Vendors
                     </Link>
-                    <Link className="sidebarLink" to='/'>
+                    <Link className="sidebarLink" to='customer-list'>
                         <span>
-                            <FontAwesomeIcon icon={faThLarge} />
+                            <FontAwesomeIcon icon={faUserTag} />
                         </span>
                         Customers
                     </Link>
-                    <Link className="sidebarLink" to='/'>
+                    <Link className="sidebarLink" to='reports'>
                         <span>
-                            <FontAwesomeIcon icon={faThLarge} />
-                        </span>
-                        Sold Books
-                    </Link>
-                    <Link className="sidebarLink" to='/'>
-                        <span>
-                            <FontAwesomeIcon icon={faThLarge} />
+                            <FontAwesomeIcon icon={faFlag} />
                         </span>
                         Reports
-                    </Link>
-                    <Link className="sidebarLink" to='/'>
-                        <span>
-                            <FontAwesomeIcon icon={faThLarge} />
-                        </span>
-                        Statistics
                     </Link>
                 </div>}
 
@@ -93,17 +86,17 @@ const Sidebar = () => {
                     </Link>
                     <Link className="sidebarLink" to='all-product'>
                         <span>
-                            <FontAwesomeIcon icon={faPlus} />
+                            <FontAwesomeIcon icon={faPrint} />
                         </span>
                         My Products
                     </Link>
-                    <Link className="sidebarLink" to='/'>
+                    <Link className="sidebarLink" to='add-product'>
                         <span>
-                            <FontAwesomeIcon icon={faThLarge} />
+                            <FontAwesomeIcon icon={faPlus} />
                         </span>
-                        Sold Books
+                        Add  Product
                     </Link>
-                    <Link className="sidebarLink" to='/'>
+                    <Link className="sidebarLink" to='stat'>
                         <span>
                             <FontAwesomeIcon icon={faThLarge} />
                         </span>
@@ -111,7 +104,7 @@ const Sidebar = () => {
                     </Link>
                 </div>}
 
-            <button onClick={() => logout()}>Logout</button>
+            <button className='btn btn-secondary w-100 logout-btn' onClick={() => logout()}>Logout</button>
         </>
     );
 };

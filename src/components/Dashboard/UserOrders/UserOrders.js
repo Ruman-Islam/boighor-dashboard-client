@@ -63,6 +63,7 @@ const UserOrders = () => {
                             <th scope="col">Payment Method</th>
                             <th scope="col">Amount</th>
                             <th scope="col">Confirmation Status</th>
+                            <th scope="col">Transaction ID</th>
                             <th scope="col">payment Status</th>
                             <th scope="col">delivery Status</th>
                         </tr>
@@ -86,6 +87,9 @@ const UserOrders = () => {
                                                     <option value="APPROVED">APPROVED</option>
                                                     <option value="CANCELED">CANCELED</option>
                                                 </select>
+                                            </td>
+                                            <td>
+                                                {order?.transaction_id ? order?.transaction_id : "N/A"}
                                             </td>
                                             <td>{order?.payment_status}</td>
                                             <td>
