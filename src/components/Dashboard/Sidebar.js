@@ -28,6 +28,7 @@ const Sidebar = () => {
 
     return (
         <>
+            <h3>{user?.displayName}</h3>
             {(admin === 'super-admin' || admin === 'admin') &&
                 <div>
                     <Link className="sidebarLink" to='order-list'>

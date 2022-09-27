@@ -23,7 +23,7 @@ const OrderList = () => {
 
     return (
         <div>
-            <h1 className='border border-1 p-2'>Order list of: {user?.displayName}</h1>
+            <h1 className='border border-1 p-2'>Order list</h1>
             <div>
                 <table className="table">
                     <thead>
@@ -50,7 +50,7 @@ const OrderList = () => {
                                                 <button
                                                     onClick={() => navigate(`/dashboard/user-orders/${order?.email}`)}
                                                     className='btn btn-primary'>
-                                                    Orders
+                                                    View Order
                                                 </button>
                                             </td>
                                             <td>{order?.updatedAt}</td>

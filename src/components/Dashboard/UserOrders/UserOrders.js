@@ -10,6 +10,7 @@ const UserOrders = () => {
     const [orders, setOrders] = useState([]);
     const navigate = useNavigate();
 
+
     useEffect(() => {
         (async () => {
             try {
@@ -54,67 +55,74 @@ const UserOrders = () => {
                     icon={faBackward} />
                 <h6>Orders for: {email}</h6>
             </div>
-            <div>
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Order Id</th>
-                            <th scope="col">Payment Method</th>
-                            <th scope="col">Amount</th>
-                            <th scope="col">Confirmation Status</th>
-                            <th scope="col">Transaction ID</th>
-                            <th scope="col">payment Status</th>
-                            <th scope="col">delivery Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {orders?.length > 0 ?
-                            orders?.map((order, index) => {
-                                return (
-                                    <>
-                                        <tr>
-                                            <th scope="row">{index + 1}</th>
-                                            <td>{order?.order_id}</td>
-                                            <td>{order?.payment_method.includes('cod') ? 'Cash on delivery' : 'Bkash'}</td>
-                                            <td>{order?.amount} Tk.</td>
-                                            <td>
-                                                <select
-                                                    defaultValue={order?.confirmation_status}
-                                                    onChange={(e) => updateConfirmationStatus(e, order?.order_id)}
-                                                >
-                                                    <option value="PROCESSING">PROCESSING</option>
-                                                    <option value="APPROVED">APPROVED</option>
-                                                    <option value="CANCELED">CANCELED</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                                {order?.transaction_id ? order?.transaction_id : "N/A"}
-                                            </td>
-                                            <td>{order?.payment_status}</td>
-                                            <td>
-                                                {/* {order?.delivery_status} */}
-                                                <select
-                                                    defaultValue={order?.confirmation_status}
-                                                    onChange={(e) => updateDeliveryStatus(e, order?.order_id)}
-                                                >
-                                                    <option value="PENDING">PENDING</option>
-                                                    <option value="SHIPPED">SHIPPED</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                    </>
-                                )
-                            })
-                            :
-                            <p>No Order</p>}
-
-
-                    </tbody>
-                </table>
-            </div>
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Order Id</th>
+                        <th scope="col">Payment Method</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Confirmation Status</th>
+                        <th scope="col">Transaction ID</th>
+                        <th scope="col">payment Status</th>
+                        <th scope="col">delivery Status</th>
+                        <th scope="col">delivery Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {orders?.length > 0 ?
+                        orders?.map((order, index) => {
+                            return (
+                                <>
+                                    <tr className='border'>
+                                        <th scope="row">{index + 1}</th>
+                                        <td>{order?.order_id}</td>
+                                        <td>{order?.payment_method.includes('cod') ? 'Cash on delivery' : 'Bkash'}</td>
+                                        <td>{order?.amount} Tk.</td>
+                                        <td>
+                                            <select
+                                                defaultValue={order?.confirmation_status}
+                                                onChange={(e) => updateConfirmationStatus(e, order?.order_id)}
+                                            >
+                                                <option value="PROCESSING">PROCESSING</option>
+                                                <option value="APPROVED">APPROVED</option>
+                                                <option value="CANCELED">CANCELED</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            {order?.transaction_id ? order?.transaction_id : "N/A"}
+                                        </td>
+                                        <td>{order?.payment_status}</td>
+                                        <td>
+                                            <select
+                                                defaultValue={order?.confirmation_status}
+                                                onChange={(e) => updateDeliveryStatus(e, order?.order_id)}
+                                            >
+                                                <option value="PENDING">PENDING</option>
+                                                <option value="SHIPPED">SHIPPED</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </>
+                            )
+                        })
+                        :
+                        <p>No Order</p>}
+                </tbody>
+            </table>
         </div>
     );
 };
 
 export default UserOrders;
+
+
+
+
+
+
+
+
+
+
+
